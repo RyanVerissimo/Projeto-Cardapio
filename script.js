@@ -158,19 +158,18 @@ checkoutBtn.addEventListener("click", function() {
 
     //Enviar pedido para API wpp
     const cartItems = cart.map((item) => {
-        return(
+        return (
             ` ${item.name} Quantidade: (${item.quantify}) Preço: R$${item.price} |`
-
         )
     }).join("")
 
     const message = encodeURIComponent(cartItems)
-    const phone = "85997794006"
+    const phone = "5585997794006"
 
     window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
 
     cart = [];
-    updateCartModal()
+    updateCartModal();
 })
 
 //Verificar a hora e manipular o card horario
